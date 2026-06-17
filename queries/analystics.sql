@@ -10,15 +10,15 @@ SELECT count(product_name) AS number_of_products FROM products WHERE product_nam
 
 
 
-SELCET count(quantity) AS total_number_of_orders FROM order_items WHERE quantity IS NOT NULL;
+SELECT count(quantity) AS total_number_of_orders FROM order_items WHERE quantity IS NOT NULL;
 
 
-SELCET max(quantity) AS biggest_order  FROM order_items WHERE quantity IS NOT NULL;
+SELECT max(quantity) AS biggest_order  FROM order_items WHERE quantity IS NOT NULL;
 
-SELCET min(quantity) AS smallest_order  FROM order_items WHERE quantity IS NOT NULL;
+SELECT min(quantity) AS smallest_order  FROM order_items WHERE quantity IS NOT NULL;
 
 
-SELECT sum(price) AS total_prices FROM products
+SELECT SUM(price) AS total_prices FROM products
 WHERE product_id > 0 
 GROUP By category 
 
