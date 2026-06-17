@@ -23,11 +23,29 @@ VALUES
 --SET price = EXCLUDED.product_name;
 
 
+INSERT INTO orders (customer_id, order_date)
+VALUES
+(1, '2026-01-05'),
+(2, '2026-01-10'),
+(1, '2026-02-15'),
+(2, '2026-03-01'),
+(1, '2026-03-20'),
+(2, '2026-04-05');
 
-INSERT INTO orders 
+INSERT INTO order_items (order_id, product_id, quantity)
+VALUES
+(1, 1, 2),   -- Order 1: 2 Laptops
+(1, 2, 1),   -- Order 1: 1 Phone
 
-INSERT INTO order order_items
+(2, 3, 4),   -- Order 2: 4 Chairs
 
+(3, 2, 3),   -- Order 3: 3 Phones
+(3, 3, 2),   -- Order 3: 2 Chairs
 
+(4, 1, 1),   -- Order 4: 1 Laptop
+
+(5, 2, 2),   -- Order 5: 2 Phones
+
+(6, 3, 5);   -- Order 6: 5 Chairs
 
 
